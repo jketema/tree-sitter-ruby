@@ -1763,13 +1763,13 @@ foo( & lambda {})
   (call
     (identifier)
     (argument_list
-      (integer)))
-  (ERROR)
+      (integer)
+      (block_argument)))
   (call
     (identifier)
     (argument_list
       (integer)
-      (ERROR)))
+      (block_argument)))
   (call
     (identifier)
     (argument_list
@@ -1779,8 +1779,7 @@ foo( & lambda {})
   (call
     (identifier)
     (argument_list
-      (binary
-        (MISSING identifier)
+      (block_argument
         (lambda
           (block)))))
   (call
@@ -1793,10 +1792,10 @@ foo( & lambda {})
   (call
     (identifier)
     (argument_list
-      (ERROR)
-      (call
-        (identifier)
-        (block)))))
+      (block_argument
+        (call
+          (identifier)
+          (block))))))
 
 ===============================
 method call with splat argument
